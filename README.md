@@ -14,12 +14,12 @@
 ## Usage
 
 ```bash
-python subdomain_enum.py <domain>
+python subdomain_enum.py <domain> <wordlist.txt>
 ```
 
 **Example:**
 ```bash
-python subdomain_enum.py example.com
+python subdomain_enum.py example.com rockyou.txt
 ```
 
 ---
