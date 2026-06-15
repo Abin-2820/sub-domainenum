@@ -1,43 +1,51 @@
 # Subdomain Enumerator
 
-> A custom-built Python tool for subdomain enumeration — developed as part of my penetration testing toolkit.
+A fast, multi-threaded subdomain enumeration tool written in Python. Accepts any custom wordlist, making it flexible for different reconnaissance scenarios.
 
 ---
 
-## Built With
+## Features
 
-- Python 3
-- Custom wordlist-based enumeration
+- Multi-threaded scanning for fast enumeration
+- Custom wordlist support — bring your own wordlist
+- Clean, minimal output showing only discovered subdomains
+- Lightweight — single script, one dependency
+
+---
+
+## Requirements
+
+- Python 3.x
+- requests
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## Usage
 
 ```bash
-python subdomain_enum.py <domain> <wordlist.txt>
+python3 sub-domainenum.py <domain> <wordlist>
 ```
 
 **Example:**
+
 ```bash
-python subdomain_enum.py example.com rockyou.txt
+python3 sub-domainenum.py google.com wordlist.txt
 ```
 
 ---
 
-## How It Works
+## Sample Output
 
-The tool takes a target domain as input, iterates through a wordlist of common subdomain names, and attempts to resolve each one — reporting valid subdomains that exist.
+```
+[*] Scanning google.com | 6 subdomains
 
----
+[+] Found: admin.google.com
 
-## Disclaimer
-
-This tool is intended for **authorized penetration testing and educational use only**. Do not use against systems you do not have permission to test.
-
----
-
-## Author
-
-**Abin Watson**  
-Penetration Tester | eJPT Certified  
-Specialising in Networks, Hosts, Endpoints & Web Applications
+[*] Done. 6 subdomains checked.
+```
