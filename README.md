@@ -49,3 +49,9 @@ python3 sub-domainenum.py google.com wordlist.txt
 
 [*] Done. 6 subdomains checked.
 ```
+
+## Author 
+Abin Watson | eJPT 
+
+Date: June 2026
+
